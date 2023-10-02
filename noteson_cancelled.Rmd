@@ -1,0 +1,783 @@
+---
+title: "notes on cancelled"
+output: html_document
+date: "2023-09-17"
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval=FALSE)
+```
+
+##GETTING INFO
+
+```{r cars}
+daviddobrik1 <- read.csv("daviddobrik1.csv")
+daviddobrik2 <- read.csv("daviddobrik2.csv")
+daviddobrik3 <- read.csv("daviddobrik3.csv")
+daviddobrik4 <- read.csv("daviddobrik4.csv")
+dd5 <- read.csv("dd5.csv")
+dd6 <- read.csv("dd6.csv")
+dd7 <- read.csv("dd7.csv")
+dd8 <- read.csv("dd8.csv")
+dd9 <- read.csv("dd9.csv")
+dd10 <- read.csv("dd10.csv")
+dd11 <- read.csv("dd11.csv")
+daviddobrik <- rbind(daviddobrik1, daviddobrik2, daviddobrik3, daviddobrik4, dd5, dd6, dd7, dd8, dd9, dd10, dd11)
+daviddobrik
+```
+
+###david dobrik
+
+```{r}
+#daviddobrik <- daviddobrik[, -7]
+daviddobrik_clean <- daviddobrik[, c(TRUE, TRUE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, TRUE, TRUE)]
+daviddobrik_clean
+write.csv(daviddobrik_clean, file = "daviddobrik_clean.csv", row.names = TRUE)
+```
+
+
+###james charles
+```{r}
+jc1 <- read.csv("jc1.csv")
+jc2 <- read.csv("jc2.csv")
+jc3 <- read.csv("jc3.csv")
+jc4 <- read.csv("jc4.csv")
+jc5 <- read.csv("jc5.csv")
+jc6 <- read.csv("jc6.csv")
+jc7 <- read.csv("jc7.csv")
+jc8 <- read.csv("jc8.csv")
+jc9 <- read.csv("jc9.csv")
+jc10 <- read.csv("jc10.csv")
+jc11 <- read.csv("jc11.csv")
+
+jamescharles <- rbind(jc1, jc2, jc3, jc4, jc5, jc6, jc7, jc8, jc9, jc10, jc11)
+jamescharles
+```
+
+```{r}
+# colnames(jamescharles)
+# c(TRUE, TRUE, TRUE, TRUE, TRUE, 
+#   TRUE, TRUE, FALSE, FALSE, FALSE, 
+#   FALSE, FALSE, FALSE, FALSE, FALSE, 
+#   FALSE, FALSE, FALSE, FALSE, FALSE, 
+#   FALSE, FALSE, TRUE, TRUE, TRUE, 
+#   TRUE, TRUE, TRUE, TRUE)
+
+jamescharles_clean <- jamescharles[, c(TRUE, TRUE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, TRUE, TRUE)]
+jamescharles_clean
+write.csv(jamescharles_clean, file = "jamescharles_clean.csv", row.names = TRUE)
+```
+
+###tati westbrook
+
+```{r}
+tw1 <- read.csv("tw1.csv")
+tw2 <- read.csv("tw2.csv")
+tw3 <- read.csv("tw3.csv")
+tw4 <- read.csv("tw4.csv")
+tw5 <- read.csv("tw5.csv")
+tw6 <- read.csv("tw6.csv")
+tw7 <- read.csv("tw7.csv")
+tw8 <- read.csv("tw8.csv")
+tw9 <- read.csv("tw9.csv")
+tw10 <- read.csv("tw10.csv")
+tw11 <- read.csv("tw11.csv")
+tw12 <- read.csv("tw12.csv")
+tw13 <- read.csv("tw13.csv")
+tw14 <- read.csv("tw14.csv")
+tw15 <- read.csv("tw15.csv")
+tw16 <- read.csv("tw16.csv")
+
+tatiwestbrook <- rbind(tw1, tw2, tw3, tw4, tw5, tw6, tw7, tw8, tw9, tw10, tw11, tw12, tw13, tw14, tw15, tw16)
+tatiwestbrook
+
+tatiwestbrook_clean <- tatiwestbrook[, c(TRUE, TRUE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, TRUE, TRUE)]
+
+tatiwestbrook_clean
+write.csv(tatiwestbrook_clean, file = "tatiwestbrook_clean.csv", row.names = TRUE)
+```
+
+###logan paul
+
+```{r}
+lp1 <- read.csv("lp1.csv")
+lp2 <- read.csv("lp2.csv")
+lp3 <- read.csv("lp3.csv")
+lp4 <- read.csv("lp4.csv")
+lp5 <- read.csv("lp5.csv")
+lp6 <- read.csv("lp6.csv")
+lp7 <- read.csv("lp7.csv")
+lp8 <- read.csv("lp8.csv")
+lp9 <- read.csv("lp9.csv")
+lp10 <- read.csv("lp10.csv")
+lp11 <- read.csv("lp11.csv")
+
+loganpaul <- rbind(lp1, lp2, lp3, lp4, lp5, lp6, lp7, lp8, lp9, lp10, lp11)
+loganpaul
+
+loganpaul_clean <- loganpaul[, c(TRUE, TRUE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, TRUE, TRUE)]
+
+loganpaul_clean
+write.csv(loganpaul_clean, file = "loganpaul_clean.csv", row.names = TRUE)
+```
+
+###shane dawson
+```{r}
+sd1 <- read.csv("sd1.csv")
+sd2 <- read.csv("sd2.csv")
+sd3 <- read.csv("sd3.csv")
+sd4 <- read.csv("sd4.csv")
+sd5 <- read.csv("sd5.csv")
+sd6 <- read.csv("sd6.csv")
+sd7 <- read.csv("sd7.csv")
+sd8 <- read.csv("sd8.csv")
+sd9 <- read.csv("sd9.csv")
+sd10 <- read.csv("sd10.csv")
+sd11 <- read.csv("sd11.csv")
+sd12 <- read.csv("sd12.csv")
+
+shanedawson <- rbind(sd1, sd2, sd3, sd4, sd5, sd6, sd7, sd8, sd9, sd10, sd11, sd12)
+shanedawson
+
+shanedawson_clean <- shanedawson[, c(TRUE, TRUE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, TRUE, TRUE)]
+
+shanedawson_clean
+write.csv(shanedawson_clean, file = "shanedawson_clean.csv", row.names = TRUE)
+```
+
+###try guys
+```{r}
+tg1 <- read.csv("tg1.csv")
+tg2 <- read.csv("tg2.csv")
+tg3 <- read.csv("tg3.csv")
+tg4 <- read.csv("tg4.csv")
+tg5 <- read.csv("tg5.csv")
+tg6 <- read.csv("tg6.csv")
+tg7 <- read.csv("tg7.csv")
+tg8 <- read.csv("tg8.csv")
+tg9 <- read.csv("tg9.csv")
+tg10 <- read.csv("tg10.csv")
+tg11 <- read.csv("tg11.csv")
+tg12 <- read.csv("tg12.csv")
+tg13 <- read.csv("tg13.csv")
+
+tryguys <- rbind(tg1, tg2, tg3, tg4, tg5, tg6, tg7, tg8, tg9, tg10, tg11, tg12, tg13)
+tryguys
+
+tryguys_clean <- tryguys[, c(TRUE, TRUE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, TRUE, TRUE)]
+
+tryguys_clean
+write.csv(tryguys_clean, file = "tryguys_clean.csv", row.names = TRUE)
+```
+
+###jeffree star
+```{r}
+jf1 <- read.csv("jf1.csv")
+jf2 <- read.csv("jf2.csv")
+jf3 <- read.csv("jf3.csv")
+jf4 <- read.csv("jf4.csv")
+jf5 <- read.csv("jf5.csv")
+jf6 <- read.csv("jf6.csv")
+jf7 <- read.csv("jf7.csv")
+jf8 <- read.csv("jf8.csv")
+jf9 <- read.csv("jf9.csv")
+
+jeffreestar <- rbind(jf1, jf2, jf3, jf4, jf5, jf6, jf7, jf8, jf9)
+jeffreestar
+
+jeffreestar_clean <- jeffreestar[, c(TRUE, TRUE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, FALSE, FALSE, FALSE, 
+  FALSE, FALSE, TRUE, TRUE, TRUE, 
+  TRUE, TRUE, TRUE, TRUE)]
+
+jeffreestar_clean
+write.csv(jeffreestar_clean, file = "jeffreestar_clean.csv", row.names = TRUE)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+##MANIPULATION
+
+
+###date
+```{r}
+jeffreestar_clean
+#mode(shanedawson_clean$snippet.publishedAt)
+
+publish_date <- substr(jeffreestar_clean$snippet.publishedAt, start = 0, stop = 10)
+jeffreestar_m <- cbind(jeffreestar_clean, publish_date)
+jeffreestar_m
+```
+
+
+###viewcount
+```{r}
+video_url <- 'https://www.youtube.com/watch?v=3jVZg8VWahE'
+response <- GET(video_url)
+page_content <- read_html(content(response, "text"))
+view_count_element <- html_element(page_content, css = '#watch7-content > meta:nth-child(17)')
+view_count_element
+view_count <- html_attrs(view_count_element)
+attributes(view_count) <- NULL
+view_count[2]
+```
+
+
+```{r}
+count <- seq(1, nrow(jeffreestar_clean))
+output9 <- rep(0, nrow(jeffreestar_clean))
+
+for (n in count)  {
+  url <- paste("https://www.youtube.com/watch?v=", jeffreestar_clean$snippet.resourceId.videoId[n], sep = "")
+  response <- GET(url)
+  page_content <- read_html(content(response, "text"))
+  view_count_element <- html_element(page_content, css = '#watch7-content > meta:nth-child(17)')
+  view_count <- html_attrs(view_count_element)
+  attributes(view_count) <- NULL
+  output9[n] <- view_count[2]
+}
+
+viewcount_jeffreestar <- output9
+viewcount_jeffreestar
+#shanedawson_clean$snippet.resourceId.videoId[202] #remove because its a livestream
+```
+
+
+```{r}
+jeffreestar_alldata <- cbind(jeffreestar_m, viewcount_jeffreestar)
+jeffreestar_alldata
+write.csv(jeffreestar_alldata, file = "jeffreestar_alldata.csv", row.names = TRUE)
+```
+
+
+###plots
+
+
+```{r}
+#Used google sheets to clean up the rest of the data (ex. remove old posts, remove Shorts, remove music videos, etc.)
+daviddobrik_final <- read.csv("daviddobrik_final.csv")
+jamescharles_final <- read.csv("jamescharles_final.csv")
+tatiwestbrook_final <- read.csv("tatiwestbrook_final.csv")
+loganpaul_final <- read.csv("loganpaul_final.csv")
+shanedawson_final <- read.csv("shanedawson_final.csv")
+jeffreestar_final <- read.csv("jeffreestar_final.csv")
+tryguys_final <- read.csv("tryguys_final.csv")
+```
+
+
+####david dobrik
+```{r david dobrik}
+pdf("daviddobrik_lm.pdf")
+dd_x_start <- as.Date('2017-04-01')
+dd_x_stop <- as.Date('2021-03-22')
+dd_x_end <- as.Date('2023-09-01')
+
+lm_dd_before <- lm(viewcount_daviddobrik ~ as.Date(publish_date), data = daviddobrik_final[daviddobrik_final$publish_date < as.Date('2021-03-22'),])
+dd_y_values1 <- predict(lm_dd_before, newdata = data.frame(publish_date = c(dd_x_start, dd_x_stop)))
+dd_y_values1
+
+lm_dd_after <- lm(viewcount_daviddobrik ~ as.Date(publish_date), data = daviddobrik_final[daviddobrik_final$publish_date > as.Date('2021-03-22'),])
+dd_y_values2 <- predict(lm_dd_after, newdata = data.frame(publish_date = c(dd_x_stop, dd_x_end)))
+dd_y_values2
+
+plot(viewcount_daviddobrik ~ as.Date(publish_date), data = daviddobrik_final,
+     cex = 1, pch = 1, col = '#5A992F',
+     xlim = as.Date(c('2017-01-01', '2023-09-01')),
+     yaxt = "n",
+     ylim = c(0, 40000000),
+     xlab = "Upload Date",
+     ylab = "View Count",
+     main = "David Dobrik View Count Over Time with Linear Models"
+     )
+axis(side = 2, at = c(0, 10000000, 20000000, 30000000, 40000000),
+     labels = c("0", "10M", "20M", "30M", "40M"),
+     las = 1)
+abline(v = as.numeric(as.Date('2018-06-05')), col = "gray", lty = 2)
+abline(v = as.numeric(as.Date('2021-03-22')), col = "red", lty = 2)
+segments(dd_x_start, dd_y_values1[1], dd_x_stop, dd_y_values1[2], col = "darkblue", lwd = 2)
+segments(dd_x_stop, dd_y_values2[1], dd_x_end, dd_y_values2[2], col = "darkblue", lwd = 2)
+dev.off()
+
+```
+
+####james charles
+```{r james charles}
+pdf("jamescharles_lm.pdf")
+jc_x_start <- as.Date('2017-04-01')
+jc_x_stop <- as.Date('2019-05-10')
+jc_x_stop2 <- as.Date('2021-04-01')
+jc_x_end <- as.Date('2023-09-01')
+
+lm_jc_before <- lm(viewcount_jamescharles ~ as.Date(publish_date), data = jamescharles_final[jamescharles_final$publish_date < as.Date('2019-05-10'),])
+jc_y_values1 <- predict(lm_jc_before, newdata = data.frame(publish_date = c(jc_x_start, jc_x_stop)))
+jc_y_values1
+
+lm_jc_between <- lm(viewcount_jamescharles ~ as.Date(publish_date), data = jamescharles_final[jamescharles_final$publish_date > as.Date('2019-05-10') & jamescharles_final$publish_date < as.Date('2021-04-01'),])
+jc_y_values2 <- predict(lm_jc_between, newdata = data.frame(publish_date = c(jc_x_stop, jc_x_stop2)))
+jc_y_values2
+
+lm_jc_after <- lm(viewcount_jamescharles ~ as.Date(publish_date), data = jamescharles_final[jamescharles_final$publish_date > as.Date('2021-04-01'),])
+jc_y_values3 <- predict(lm_jc_after, newdata = data.frame(publish_date = c(jc_x_stop2, jc_x_end)))
+jc_y_values3
+
+plot(viewcount_jamescharles ~ as.Date(publish_date), data = jamescharles_final,
+     cex = 1, pch = 1, col = '#5A992F',
+     xlim = as.Date(c('2017-01-01', '2023-09-01')),
+     yaxt = "n",
+     ylim = c(0, 60000000),
+     xlab = "Upload Date",
+     ylab = "View Count",
+     main = "James Charles View Count Over Time with Linear Models"
+     )
+axis(side = 2, at = c(0, 10000000, 20000000, 30000000, 40000000, 50000000, 60000000),
+     labels = c("0", "10M", "20M", "30M", "40M", "50M", "60M"),
+     las = 1)
+abline(v = as.numeric(as.Date('2021-04-01')), col = "red", lty = 2) #SA
+abline(v = as.numeric(as.Date('2019-05-10')), col = "red", lty = 2) #tati video
+abline(v = as.numeric(as.Date('2019-05-18')), col = "red", lty = 2) #james response
+segments(jc_x_start, jc_y_values1[1], jc_x_stop, jc_y_values1[2], col = "darkblue", lwd = 2)
+segments(jc_x_stop, jc_y_values2[1], jc_x_stop2, jc_y_values2[2], col = "darkblue", lwd = 2)
+segments(jc_x_stop2, jc_y_values3[1], jc_x_end, jc_y_values3[2], col = "darkblue", lwd = 2)
+dev.off()
+```
+
+####logan paul
+```{r logan paul}
+pdf("loganpaul_lm.pdf")
+lp_x_start <- as.Date('2017-04-01')
+lp_x_stop <- as.Date('2017-12-31')
+lp_x_end <- as.Date('2023-09-01')
+
+lm_lp_before <- lm(viewcount_loganpaul ~ as.Date(publish_date), data = loganpaul_final[loganpaul_final$publish_date < as.Date('2017-12-31'),])
+lp_y_values1 <- predict(lm_lp_before, newdata = data.frame(publish_date = c(lp_x_start, lp_x_stop)))
+lp_y_values1
+
+lm_lp_after <- lm(viewcount_loganpaul ~ as.Date(publish_date), data = loganpaul_final[loganpaul_final$publish_date > as.Date('2017-12-31'),])
+lp_y_values2 <- predict(lm_lp_after, newdata = data.frame(publish_date = c(lp_x_stop, lp_x_end)))
+lp_y_values2
+
+plot(viewcount_loganpaul ~ as.Date(publish_date), data = loganpaul_final,
+     cex = 1, pch = 1, col = '#5A992F',
+     xlim = as.Date(c('2017-01-01', '2023-09-01')),
+     yaxt = "n",
+     ylim = c(0, 40000000),
+     xlab = "Upload Date",
+     ylab = "View Count",
+     main = "Logan Paul View Count Over Time with Linear Models"
+     )
+axis(side = 2, at = c(0, 10000000, 20000000, 30000000, 40000000),
+     labels = c("0", "10M", "20M", "30M", "40M"),
+     las = 1)
+abline(v = as.numeric(as.Date('2017-12-31')), col = "red", lty = 2)
+segments(lp_x_start, lp_y_values1[1], lp_x_stop, lp_y_values1[2], col = "darkblue", lwd = 2)
+segments(lp_x_stop, lp_y_values2[1], lp_x_end, lp_y_values2[2], col = "darkblue", lwd = 2)
+dev.off()
+```
+
+####shane dawson
+```{r shane dawson}
+pdf("shanedawson_lm.pdf")
+sd_x_start <- as.Date('2017-04-01')
+sd_x_stop <- as.Date('2019-05-10')
+sd_x_end <- as.Date('2023-09-01')
+
+lm_sd_before <- lm(viewcount_shanedawson ~ as.Date(publish_date), data = shanedawson_final[shanedawson_final$publish_date < as.Date('2019-05-10'),])
+sd_y_values1 <- predict(lm_sd_before, newdata = data.frame(publish_date = c(sd_x_start, sd_x_stop)))
+sd_y_values1
+
+lm_sd_after <- lm(viewcount_shanedawson ~ as.Date(publish_date), data = shanedawson_final[shanedawson_final$publish_date > as.Date('2019-05-10'),])
+sd_y_values2 <- predict(lm_sd_after, newdata = data.frame(publish_date = c(sd_x_stop, sd_x_end)))
+sd_y_values2
+
+plot(viewcount_shanedawson ~ as.Date(publish_date), data = shanedawson_final,
+     cex = 1, pch = 1, col = '#5A992F',
+     xlim = as.Date(c('2017-01-01', '2023-09-01')),
+     yaxt = "n",
+     ylim = c(0, 50000000),
+     xlab = "Upload Date",
+     ylab = "View Count",
+     main = "Shane Dawson View Count Over Time with Linear Models"
+     )
+axis(side = 2, at = c(0, 10000000, 20000000, 30000000, 40000000, 50000000),
+     labels = c("0", "10M", "20M", "30M", "40M", "50M"),
+     las = 1)
+abline(v = as.numeric(as.Date('2019-05-10')), col = "red", lty = 2)
+segments(sd_x_start, sd_y_values1[1], sd_x_stop, sd_y_values1[2], col = "darkblue", lwd = 2)
+segments(sd_x_stop, sd_y_values2[1], sd_x_end, sd_y_values2[2], col = "darkblue", lwd = 2)
+dev.off()
+```
+
+####tati westbrook
+```{r tati westbrook}
+pdf("tatiwestbrook_lm.pdf")
+tw_x_start <- as.Date('2017-04-01')
+tw_x_stop <- as.Date('2019-05-10')
+tw_x_stop2 <- as.Date('2020-06-30')
+tw_x_end <- as.Date('2023-09-01')
+
+lm_tw_before <- lm(viewcount_tatiwestbrook ~ as.Date(publish_date), data = tatiwestbrook_final[tatiwestbrook_final$publish_date < as.Date('2019-05-10'),])
+tw_y_values1 <- predict(lm_tw_before, newdata = data.frame(publish_date = c(tw_x_start, tw_x_stop)))
+tw_y_values1
+
+lm_tw_between <- lm(viewcount_tatiwestbrook ~ as.Date(publish_date), data = tatiwestbrook_final[tatiwestbrook_final$publish_date > as.Date('2019-05-10') & tatiwestbrook_final$publish_date < as.Date('2020-06-30'),])
+tw_y_values2 <- predict(lm_tw_between, newdata = data.frame(publish_date = c(tw_x_stop, tw_x_stop2)))
+tw_y_values2
+
+lm_tw_after <- lm(viewcount_tatiwestbrook ~ as.Date(publish_date), data = tatiwestbrook_final[tatiwestbrook_final$publish_date > as.Date('2020-06-30'),])
+tw_y_values3 <- predict(lm_tw_after, newdata = data.frame(publish_date = c(tw_x_stop2, tw_x_end)))
+tw_y_values3
+
+plot(viewcount_tatiwestbrook ~ as.Date(publish_date), data = tatiwestbrook_final,
+     cex = 1, pch = 1, col = '#5A992F',
+     xlim = as.Date(c('2017-01-01', '2023-09-01')),
+     yaxt = "n",
+     ylim = c(0, 7500000),
+     xlab = "Upload Date",
+     ylab = "View Count",
+     main = "Tati Westbrook View Count Over Time with Linear Models"
+     )
+axis(side = 2, at = c(0, 2500000, 5000000, 7500000),
+     labels = c("0", "2.5M", "5M", "7.5M"),
+     las = 1)
+abline(v = as.numeric(as.Date('2019-05-10')), col = "red", lty = 2) #dramageddon 2
+abline(v = as.numeric(as.Date('2020-06-30')), col = "red", lty = 2) #karmageddon
+segments(tw_x_start, tw_y_values1[1], tw_x_stop, tw_y_values1[2], col = "darkblue", lwd = 2)
+segments(tw_x_stop, tw_y_values2[1], tw_x_stop2, tw_y_values2[2], col = "darkblue", lwd = 2)
+segments(tw_x_stop2, tw_y_values3[1], tw_x_end, tw_y_values3[2], col = "darkblue", lwd = 2)
+dev.off()
+```
+
+####try guys
+```{r try guys}
+pdf("tryguys_lm.pdf")
+tg_x_start <- as.Date('2018-06-16')
+tg_x_stop <- as.Date('2022-09-27')
+tg_x_end <- as.Date('2023-09-01')
+
+lm_tg_before <- lm(viewcount_tryguys ~ as.Date(publish_date), data = tryguys_final[tryguys_final$publish_date < as.Date('2022-09-27'),])
+tg_y_values1 <- predict(lm_tg_before, newdata = data.frame(publish_date = c(tg_x_start, tg_x_stop)))
+tg_y_values1
+
+lm_tg_after <- lm(viewcount_tryguys ~ as.Date(publish_date), data = tryguys_final[tryguys_final$publish_date > as.Date('2022-09-27'),])
+tg_y_values2 <- predict(lm_tg_after, newdata = data.frame(publish_date = c(tg_x_stop, tg_x_end)))
+tg_y_values2
+
+plot(viewcount_tryguys ~ as.Date(publish_date), data = tryguys_final,
+     cex = 1, pch = 1, col = '#5A992F',
+     xlim = as.Date(c('2017-01-01', '2023-09-01')),
+     yaxt = "n",
+     ylim = c(0, 30000000),
+     xlab = "Upload Date",
+     ylab = "View Count",
+     main = "Try Guys View Count Over Time with Linear Models"
+     )
+axis(side = 2, at = c(0, 10000000, 20000000, 30000000),
+     labels = c("0", "10M", "20M", "30M"),
+     las = 1)
+abline(v = as.numeric(as.Date('2022-09-27')), col = "red", lty = 2)
+segments(tg_x_start, tg_y_values1[1], tg_x_stop, tg_y_values1[2], col = "darkblue", lwd = 2)
+segments(tg_x_stop, tg_y_values2[1], tg_x_end, tg_y_values2[2], col = "darkblue", lwd = 2)
+dev.off()
+```
+
+####jeffree star
+```{r jeffree star}
+pdf("jeffreestar_lm.pdf")
+jf_x_start <- as.Date('2017-04-01')
+jf_x_stop <- as.Date('2019-05-10')
+jf_x_end <- as.Date('2023-09-01')
+
+lm_jf_before <- lm(viewcount_jeffreestar ~ as.Date(publish_date), data = jeffreestar_final[jeffreestar_final$publish_date < as.Date('2019-05-10'),])
+jf_y_values1 <- predict(lm_jf_before, newdata = data.frame(publish_date = c(jf_x_start, jf_x_stop)))
+jf_y_values1
+
+lm_jf_after <- lm(viewcount_jeffreestar ~ as.Date(publish_date), data = jeffreestar_final[jeffreestar_final$publish_date > as.Date('2019-05-10'),])
+jf_y_values2 <- predict(lm_jf_after, newdata = data.frame(publish_date = c(jf_x_stop, jf_x_end)))
+jf_y_values2
+
+
+plot(viewcount_jeffreestar ~ as.Date(publish_date), data = jeffreestar_alldata_old_removed,
+     cex = 1, pch = 1, col = '#5A992F',
+     xlim = as.Date(c('2017-01-01', '2023-09-01')),
+     yaxt = "n",
+     ylim = c(0, 50000000),
+     xlab = "Upload Date",
+     ylab = "View Count",
+     main = "Jeffree Star View Count Over Time with Linear Models"
+     )
+axis(side = 2, at = c(0, 10000000, 20000000, 30000000, 40000000, 50000000),
+     labels = c("0", "10M", "20M", "30M", "40M", "50M"),
+     las = 1)
+abline(v = as.numeric(as.Date('2019-05-10')), col = "red", lty = 2)
+segments(jf_x_start, jf_y_values1[1], jf_x_stop, jf_y_values1[2], col = "darkblue", lwd = 2)
+segments(jf_x_stop, jf_y_values2[1], jf_x_end, jf_y_values2[2], col = "darkblue", lwd = 2)
+
+dev.off()
+# abline(lm_jf_before, col = "blue")
+# abline(lm_jf_after, col = "blue")
+
+```
+
+
+
+
+
+
+
+
+
+###dramageddon 2
+```{r}
+pdf("dramageddon_summary.pdf")
+par(mfrow = c(4, 1), fin = c(5, 3), mgp= c(3, 1, 0))
+plot(viewcount_jamescharles ~ as.Date(publish_date), data = jamescharles_final,
+     cex = 1, pch = 1, col = '#37474C',
+     xlim = as.Date(c('2017-01-01', '2023-09-01')),
+     ylim = c(0, 60000000),
+     yaxt = "n",
+     xlab = "Upload Date",
+     ylab = "View Count",
+     main = "James Charles"
+     )
+axis(side = 2, at = c(0, 10000000, 20000000, 30000000, 40000000, 50000000, 60000000),
+     labels = c("0", "10M", "20M", "30M", "40M", "50M", "60M"),
+     las = 1)
+abline(v = as.numeric(as.Date('2019-05-10')), col = "red", lty = 2) #tati video
+abline(v = as.numeric(as.Date('2019-05-18')), col = "red", lty = 2) #james response
+points(as.Date('2019-05-18'), 57341661, pch = 4, cex = 1.5, col = "red") #james response
+
+
+plot(viewcount_shanedawson ~ as.Date(publish_date), data = shanedawson_final,
+     cex = 1, pch = 1, col = '#445948',
+     xlim = as.Date(c('2017-01-01', '2023-09-01')),
+     ylim = c(0, 60000000),
+     yaxt = "n",
+     xlab = "Upload Date",
+     ylab = "View Count",
+     main = "Shane Dawson"
+     )
+axis(side = 2, at = c(0, 10000000, 20000000, 30000000, 40000000, 50000000, 60000000),
+     labels = c("0", "10M", "20M", "30M", "40M", "50M", "60M"),
+     las = 1)
+abline(v = as.numeric(as.Date('2019-05-10')), col = "red", lty = 2) #tati video
+abline(v = as.numeric(as.Date('2019-05-18')), col = "red", lty = 2) #james response
+
+plot(viewcount_jeffreestar ~ as.Date(publish_date), data = jeffreestar_final,
+     cex = 1, pch = 1, col = '#99936A',
+     xlim = as.Date(c('2017-01-01', '2023-09-01')),
+     ylim = c(0, 60000000),
+     yaxt = "n",
+     xlab = "Upload Date",
+     ylab = "View Count",
+     main = "Jeffree Star"
+     )
+axis(side = 2, at = c(0, 10000000, 20000000, 30000000, 40000000, 50000000, 60000000),
+     labels = c("0", "10M", "20M", "30M", "40M", "50M", "60M"),
+     las = 1)
+abline(v = as.numeric(as.Date('2019-05-10')), col = "red", lty = 2) #tati video
+abline(v = as.numeric(as.Date('2019-05-18')), col = "red", lty = 2) #james response
+
+plot(viewcount_tatiwestbrook ~ as.Date(publish_date), data = tatiwestbrook_final,
+     cex = 1, pch = 1, col = 'darkgreen',
+     xlim = as.Date(c('2017-01-01', '2023-09-01')),
+     ylim = c(0, 60000000),
+     yaxt = "n",
+     xlab = "Upload Date",
+     ylab = "View Count",
+     main = "Tati Westbrook"
+     )
+axis(side = 2, at = c(0, 10000000, 20000000, 30000000, 40000000, 50000000, 60000000),
+     labels = c("0", "10M", "20M", "30M", "40M", "50M", "60M"),
+     las = 1)
+abline(v = as.numeric(as.Date('2019-05-10')), col = "red", lty = 2) #tati video
+abline(v = as.numeric(as.Date('2019-05-18')), col = "red", lty = 2) #james response
+points(as.Date('2019-05-10'), 47000000, pch = 4, cex = 1.5, col = "red") #tati video + viewcount
+dev.off()
+```
+
+
+###all linear models
+```{r}
+pdf("linear_models.pdf")
+#david dobrik: '2021-03-22'
+#james charles: '2019-05-10'  SA: '2021-04-01'
+#logan paul: '2017-12-31'
+#shane dawson: '2019-05-10'
+#tati westbrook: '2019-05-10' karmageddon: '2020-06-30'
+#try guys: '2022-09-27'
+#jeffree star: '2019-05-10'
+
+#james charles: dramageddon
+jc_y_alm1 <- predict(lm_jc_before, newdata = data.frame(publish_date = c(as.Date('2018-11-10'), as.Date('2019-05-10'))))
+jc_y_alm1
+jc_y_alm2 <- predict(lm_jc_between, newdata = data.frame(publish_date = c(as.Date('2019-05-10'), as.Date('2019-11-10'))))
+jc_y_alm2
+#james charles: SA
+jc_y_alm3 <- predict(lm_jc_between, newdata = data.frame(publish_date = c(as.Date('2020-10-01'), as.Date('2021-04-01'))))
+jc_y_alm3
+jc_y_alm4 <- predict(lm_jc_after, newdata = data.frame(publish_date = c(as.Date('2021-04-01'), as.Date('2021-10-01'))))
+jc_y_alm4
+
+#tati westbrook, dramageddon
+tw_y_alm1 <- predict(lm_tw_before, newdata = data.frame(publish_date = c(as.Date('2018-11-10'), as.Date('2019-05-10'))))
+tw_y_alm1
+tw_y_alm2 <- predict(lm_tw_between, newdata = data.frame(publish_date = c(as.Date('2019-05-10'), as.Date('2019-11-10'))))
+tw_y_alm2
+#tati westbrook, karmageddon
+tw_y_alm3 <- predict(lm_tw_before, newdata = data.frame(publish_date = c(as.Date('2020-01-30'), as.Date('2020-06-30'))))
+tw_y_alm3
+tw_y_alm4 <- predict(lm_tw_between, newdata = data.frame(publish_date = c(as.Date('2020-06-30'), as.Date('2021-01-30'))))
+tw_y_alm4
+
+#jeffree star, dramageddon
+jf_y_alm1 <- predict(lm_jf_before, newdata = data.frame(publish_date = c(as.Date('2018-11-10'), as.Date('2019-05-10'))))
+jf_y_alm1
+jf_y_alm2 <- predict(lm_jf_after, newdata = data.frame(publish_date = c(as.Date('2019-05-10'), as.Date('2019-11-10'))))
+jf_y_alm2
+
+#shane dawson, dramageddon
+sd_y_alm1 <- predict(lm_sd_before, newdata = data.frame(publish_date = c(as.Date('2018-11-10'), as.Date('2019-05-10'))))
+sd_y_alm1
+sd_y_alm2 <- predict(lm_sd_after, newdata = data.frame(publish_date = c(as.Date('2019-05-10'), as.Date('2019-11-10'))))
+sd_y_alm2
+
+#david dobrik
+dd_y_alm1 <- predict(lm_dd_before, newdata = data.frame(publish_date = c(as.Date('2020-09-22'), as.Date('2021-03-22'))))
+dd_y_alm1
+dd_y_alm2 <- predict(lm_dd_after, newdata = data.frame(publish_date = c(as.Date('2021-03-22'), as.Date('2021-09-22'))))
+dd_y_alm2
+
+#logan paul
+lp_y_alm1 <- predict(lm_lp_before, newdata = data.frame(publish_date = c(as.Date('2017-06-30'), as.Date('2017-12-31'))))
+lp_y_alm1
+lp_y_alm2 <- predict(lm_lp_after, newdata = data.frame(publish_date = c(as.Date('2017-12-31'), as.Date('2018-06-30'))))
+lp_y_alm2
+
+#try guys
+tg_y_alm1 <- predict(lm_tg_before, newdata = data.frame(publish_date = c(as.Date('2022-03-27'), as.Date('2022-09-27'))))
+tg_y_alm1
+tg_y_alm2 <- predict(lm_tg_after, newdata = data.frame(publish_date = c(as.Date('2022-09-27'), as.Date('2022-09-27'))))
+tg_y_alm2
+
+plot(viewcount_tatiwestbrook ~ as.Date(publish_date), data = tatiwestbrook_final,
+     cex = 0, pch = 1, col = 'darkgreen',
+     xlim = as.Date(c('2018-11-10', '2019-11-10')),
+     ylim = c(0, 40000000),
+     yaxt = "n",
+     xaxt = 'n',
+     xlab = "Upload Date",
+     ylab = "View Count",
+     main = "Aligned Linear Models of Predicted View Counts"
+     )
+axis(side = 2, at = c(0, 10000000, 20000000, 30000000, 40000000),
+     labels = c("0", "10M", "20M", "30M", "40M"),
+     las = 1)
+axis(side = 1, at = as.Date(c('2018-11-10', '2018-12-10', '2019-01-10', '2019-02-10', '2019-03-10', '2019-04-10', '2019-05-10', '2019-06-10', '2019-07-10', '2019-08-10', '2019-09-10', '2019-10-10', '2019-11-10')),
+     labels = c("-6m", "-5m", "-4m", "-3m", "-2m", "", "event", "", "2m", "", "4m", "", "6m"),
+     las = 1)
+legend("topright", 
+       c("James Charles (Dramageddon)", "James Charles (SA)", "Tati Westbrook (Dramageddon)", "Tati Westbrook (Karmageddon)", "Jeffree Star (Dramageddon)", "Shane Dawson (Dramageddon)", "David Dobrik", "Logan Paul", "Try Guys"),
+       col = c("darkblue", "darkgreen", "red", "darkred", "purple", "pink", "orange", "lightgreen", "yellow"),
+       lty = c(1, 1, 1, 1, 1, 1, 1, 1, 1),
+       cex = 0.75
+       )
+abline(v = as.numeric(as.Date('2019-05-10')), col = "gray", lty = 2, lwd = 2)
+#james charles, dramageddon
+segments(as.Date('2018-11-10'), jc_y_alm1[1], as.Date('2019-05-10'), jc_y_alm1[2], col = "darkblue", lwd = 2)
+segments(as.Date('2019-05-10'), jc_y_alm2[1], as.Date('2019-11-10'), jc_y_alm2[2], col = "darkblue", lwd = 2)
+#james charles, SA
+segments(as.Date('2018-11-10'), jc_y_alm3[1], as.Date('2019-05-10'), jc_y_alm3[2], col = "darkgreen", lwd = 2)
+segments(as.Date('2019-05-10'), jc_y_alm4[1], as.Date('2019-11-10'), jc_y_alm4[2], col = "darkgreen", lwd = 2)
+#tati westbrook, dramageddon
+segments(as.Date('2018-11-10'), tw_y_alm1[1], as.Date('2019-05-10'), tw_y_alm1[2], col = "red", lwd = 2)
+segments(as.Date('2019-05-10'), tw_y_alm2[1], as.Date('2019-11-10'), tw_y_alm2[2], col = "red", lwd = 2)
+#tati westbrook, karmageddon
+segments(as.Date('2018-11-10'), tw_y_alm3[1], as.Date('2019-05-10'), tw_y_alm3[2], col = "darkred", lwd = 2)
+segments(as.Date('2019-05-10'), tw_y_alm4[1], as.Date('2019-11-10'), tw_y_alm4[2], col = "darkred", lwd = 2)
+#jeffree star, dramageddon
+segments(as.Date('2018-11-10'), jf_y_alm1[1], as.Date('2019-05-10'), jf_y_alm1[2], col = "purple", lwd = 2)
+segments(as.Date('2019-05-10'), jf_y_alm2[1], as.Date('2019-11-10'), jf_y_alm2[2], col = "purple", lwd = 2)
+#shane dawson, dramageddon
+segments(as.Date('2018-11-10'), sd_y_alm1[1], as.Date('2019-05-10'), sd_y_alm1[2], col = "pink", lwd = 2)
+segments(as.Date('2019-05-10'), sd_y_alm2[1], as.Date('2019-11-10'), sd_y_alm2[2], col = "pink", lwd = 2)
+#david dobrik
+segments(as.Date('2018-11-10'), dd_y_alm1[1], as.Date('2019-05-10'), dd_y_alm1[2], col = "orange", lwd = 2)
+segments(as.Date('2019-05-10'), dd_y_alm2[1], as.Date('2019-11-10'), dd_y_alm2[2], col = "orange", lwd = 2)
+#logan paul
+segments(as.Date('2018-11-10'), lp_y_alm1[1], as.Date('2019-05-10'), lp_y_alm1[2], col = "lightgreen", lwd = 2)
+segments(as.Date('2019-05-10'), lp_y_alm2[1], as.Date('2019-11-10'), lp_y_alm2[2], col = "lightgreen", lwd = 2)
+#try guys
+segments(as.Date('2018-11-10'), tg_y_alm1[1], as.Date('2019-05-10'), tg_y_alm1[2], col = "yellow", lwd = 2)
+segments(as.Date('2019-05-10'), tg_y_alm2[1], as.Date('2019-11-10'), tg_y_alm2[2], col = "yellow", lwd = 2)
+dev.off()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
